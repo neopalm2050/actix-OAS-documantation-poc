@@ -1,0 +1,25 @@
+openapi: '3.0.2'
+info:
+  title: actix poc (tinger)
+  version: '0.1.0'
+servers:
+  - url: 127.0.0.1:8080
+paths:
+  /ting:
+    get:
+      summary: Query the number of tings
+      description: Query the number of tings.
+      operationId: get_tings
+      responses:
+        '200':
+          description: Successful Operation
+        '500':
+          description: Internal Server Error
+    post:
+      summary: Ting the server
+      description: Increment the number of times the server has been tinged.
+      responses:
+        '200':
+          description: Successful Operation
+        '500':
+          description: Internal Server Error
